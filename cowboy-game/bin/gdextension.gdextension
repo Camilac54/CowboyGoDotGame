@@ -1,9 +1,9 @@
 [configuration]
 
 entry_symbol = "example_library_init"
-compatability_minimum = "4.1"
+compatibility_minimum = "4.1"
 relodable = true
 
 [libraries]
-macos.debug = "res://bin/macos/libgdextension.maos.template_debug.dylib"
+macos.debug = "res://bin/macos/libgdextension.macos.template_debug.dylib"
 macos.release = "res://bin/macos/libgdextension.macos.template_release.dylib"

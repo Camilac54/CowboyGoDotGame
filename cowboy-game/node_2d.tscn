@@ -1,0 +1,120 @@
+[gd_scene load_steps=21 format=3 uid="uid://ithpsg3uc4ec"]
+
+[ext_resource type="Texture2D" uid="uid://dlsflr7vrvtty" path="res://assets/Main Game Background (1).png" id="1_4d7sh"]
+[ext_resource type="Texture2D" uid="uid://bcacysf3rvkhh" path="res://AlienGuy/sprite_alien10.png" id="2_ir8iy"]
+[ext_resource type="Texture2D" uid="uid://b0ayftysgcwcy" path="res://AlienGuy/sprite_alien11.png" id="3_hqns4"]
+[ext_resource type="Texture2D" uid="uid://b202foa0jdk4t" path="res://AlienGuy/sprite_alien12.png" id="4_x0ka3"]
+[ext_resource type="Texture2D" uid="uid://dadcl5v3u8tgm" path="res://AlienGuy/sprite_alien13.png" id="5_0h7mo"]
+[ext_resource type="Texture2D" uid="uid://qqy8oj3wx7j6" path="res://AlienGuy/sprite_alien14.png" id="6_nr8wp"]
+[ext_resource type="Texture2D" uid="uid://dbwlka3nu60pk" path="res://AlienGuy/sprite_alien15.png" id="7_d2bti"]
+[ext_resource type="Texture2D" uid="uid://dsj2kghslf0dv" path="res://AlienGuy/sprite_alien16.png" id="8_ta5nu"]
+[ext_resource type="Texture2D" uid="uid://cswago50jv2dr" path="res://AlienGuy/sprite_alien17.png" id="9_flf07"]
+[ext_resource type="Texture2D" uid="uid://qdhbfhm0kfq5" path="res://CowboyGuy/sprite_CowboyGuy0.png" id="10_flf07"]
+[ext_resource type="Texture2D" uid="uid://d03ehfjgss6ta" path="res://CowboyGuy/sprite_CowboyGuy1.png" id="11_k73cj"]
+[ext_resource type="Texture2D" uid="uid://dxip3fm4hnnn4" path="res://CowboyGuy/sprite_CowboyGuy2.png" id="12_rjqkl"]
+[ext_resource type="Texture2D" uid="uid://v3kn1ocy4f8n" path="res://CowboyGuy/sprite_CowboyGuy3.png" id="13_fs4d3"]
+[ext_resource type="Texture2D" uid="uid://bkao582wty2mu" path="res://CowboyGuy/sprite_CowboyGuy5.png" id="14_7vxoj"]
+[ext_resource type="Texture2D" uid="uid://ivbhqn4q7j4f" path="res://CowboyGuy/sprite_CowboyGuy4.png" id="15_ei405"]
+[ext_resource type="Texture2D" uid="uid://cwrtar0o5bnwu" path="res://CowboyGuy/sprite_CowboyGuy6.png" id="16_e8dv2"]
+[ext_resource type="Texture2D" uid="uid://dt728nle2m0jp" path="res://CowboyGuy/sprite_CowboyGuy7.png" id="17_2nhjh"]
+[ext_resource type="Texture2D" uid="uid://wm1430x1r6ey" path="res://assets/StartButton.png" id="18_k73cj"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_k73cj"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_ir8iy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_hqns4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_x0ka3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_0h7mo")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_nr8wp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_d2bti")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_ta5nu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_flf07")
+}],
+"loop": true,
+"name": &"Float",
+"speed": 5.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_bjha6"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("10_flf07")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_k73cj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_rjqkl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_fs4d3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_7vxoj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_ei405")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_e8dv2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_2nhjh")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="Node2D" type="Node2D"]
+position = Vector2(-6502, 2356)
+scale = Vector2(0.999262, 1)
+
+[node name="MainGameBackground(1)" type="Sprite2D" parent="."]
+position = Vector2(7083.18, -2034.97)
+scale = Vector2(0.112203, 0.111447)
+texture = ExtResource("1_4d7sh")
+
+[node name="AlienGuySprite" type="CharacterBody2D" parent="."]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="AlienGuySprite"]
+position = Vector2(7353.43, -1973)
+scale = Vector2(0.267203, 0.258423)
+sprite_frames = SubResource("SpriteFrames_k73cj")
+animation = &"Float"
+frame_progress = 0.853684
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="AlienGuySprite"]
+
+[node name="CowboyGuySprite" type="CharacterBody2D" parent="."]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="CowboyGuySprite"]
+position = Vector2(6755.99, -1869)
+scale = Vector2(0.147642, 0.154541)
+sprite_frames = SubResource("SpriteFrames_bjha6")
+frame_progress = 0.0403153
+speed_scale = 2.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CowboyGuySprite"]
+
+[node name="StartButton" type="Sprite2D" parent="."]
+position = Vector2(7060.21, -2005)
+scale = Vector2(0.488499, 0.45166)
+texture = ExtResource("18_k73cj")
